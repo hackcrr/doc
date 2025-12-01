@@ -1,5 +1,7 @@
 # 构建阶段：编译网站
 FROM node:20-alpine AS builder
+# 在Alpine中安装git
+RUN apk add --no-cache git
 
 WORKDIR /app
 
@@ -10,6 +12,10 @@ RUN npm ci
 # 复制所有源代码
 COPY . .
 
+
+# 设置git配置（避免警告）
+RUN git config --global user.email "build@docker.ci" && \
+    git config --global user.name "Docker Build Bot"
 # 构建VitePress网站
 RUN npm run docs:build
 
