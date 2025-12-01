@@ -20,14 +20,10 @@ jobs:
         node-version: '20'
     
     - name: Install dependencies
-      run: |
-        cd doc
-        npm ci
+      run: npm ci  # 直接在根目录运行
     
     - name: Build VitePress site
-      run: |
-        cd doc
-        npm run docs:build
+      run: npm run docs:build  # 直接在根目录运行
     
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3

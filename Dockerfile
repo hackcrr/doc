@@ -18,7 +18,7 @@ FROM nginx:alpine
 
 # 复制构建好的网站文件
 # 注意：输出目录是 doc/.vitepress/dist
-COPY --from=builder /app/doc/.vitepress/dist /usr/share/nginx/html
+COPY --from=builder /app/.vitepress/dist /usr/share/nginx/html
 
 # 可选：添加Nginx配置优化SPA路由
 RUN echo 'server { \
