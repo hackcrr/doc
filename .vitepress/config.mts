@@ -239,7 +239,7 @@ export default defineConfig({
   head: [
     ['meta', { name: 'theme-color', content: '#3c8772' }],
     ['meta', { name: 'keywords', content: '数据库,API,MySQL,管理接口,文档' }],
-    ['link', { rel: 'icon', href: '/.vitepress/public/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
 
   // 开发服务器配置
