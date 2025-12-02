@@ -3,6 +3,8 @@ name: Build and Deploy to DockerHub
 on:
   push:
     branches: [main]
+    # 可选：当推送特定格式的标签时也触发
+    tags: ['v*.*.*']
   pull_request:
     branches: [main]
 
@@ -11,8 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout code
+    - name: Checkout code (带标签信息)
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # 获取所有历史和标签
     
     - name: Set up Node.js
       uses: actions/setup-node@v4
@@ -20,10 +24,37 @@ jobs:
         node-version: '20'
     
     - name: Install dependencies
-      run: npm ci  # 直接在根目录运行
+      run: npm ci
     
     - name: Build VitePress site
-      run: npm run docs:build  # 直接在根目录运行
+      run: npm run docs:build
+    
+    # ========== 核心：自动生成版本号 ==========
+    - name: Generate Version Tag
+      id: version
+      run: |
+        # 获取最新的语义化版本标签
+        LATEST_TAG=$(git describe --tags --match "v*.*.*" --abbrev=0 2>/dev/null || echo "v0.0.0")
+        echo "最新标签: $LATEST_TAG"
+        
+        # 提取版本号并递增修订号
+        VERSION=${LATEST_TAG#v}  # 移除v前缀
+        IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
+        
+        # 如果是main分支推送，自动递增PATCH版本
+        if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+          NEW_PATCH=$((PATCH + 1))
+          NEW_VERSION="v$MAJOR.$MINOR.$NEW_PATCH"
+          echo "自动递增修订号: $NEW_VERSION"
+        else
+          # 其他情况使用当前最新版本
+          NEW_VERSION="$LATEST_TAG"
+          echo "使用现有版本: $NEW_VERSION"
+        fi
+        
+        # 输出到GITHUB_OUTPUT供后续步骤使用
+        echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
+        echo "latest_tag=$LATEST_TAG" >> $GITHUB_OUTPUT
     
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
@@ -39,6 +70,8 @@ jobs:
       with:
         context: .
         push: true
+        # 强制不使用缓存，确保每次构建都更新
+        no-cache: true
         tags: |
           ${{ secrets.DOCKER_USERNAME }}/doc-site:latest
-          ${{ secrets.DOCKER_USERNAME }}/doc-site:${{ github.sha }}
+          ${{ secrets.DOCKER_USERNAME }}/doc-site:${{ steps.version.outputs.version }}
