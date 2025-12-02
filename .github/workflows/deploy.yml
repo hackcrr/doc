@@ -30,7 +30,7 @@ jobs:
       run: npm run docs:build
     
     # ========== 核心：自动生成版本号 ==========
-    - name: Generate Version Tag
+    - name: Generate Version Tag1
       id: version
       env:
         GH_PAT: ${{ secrets.GH_PAT }}  # 你在GitHub Secrets中配置的PAT
