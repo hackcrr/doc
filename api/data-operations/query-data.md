@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-GET /database/{db_name}/table/{table_name}/data
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/database/{db_name}/table/{table_name}/data"/>
 
 查询指定表中的数据，支持分页、字段选择、条件过滤和排序。
 

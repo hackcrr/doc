@@ -2,18 +2,11 @@
 
 ## 端点信息
 
-```http
-POST /admin/database-permissions
-Authorization: Bearer your_api_key
-Content-Type: application/json
-```
+<ApiEndpoint method="POST" path="/admin/database-permissions"/>
 
 授予用户数据库权限。
 
-```http
-GET /user/databases
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/user/databases"/>
 
 获取当前用户有权限访问的数据库列表。
 

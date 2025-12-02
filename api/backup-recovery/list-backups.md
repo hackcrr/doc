@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-GET /database/{db_name}/backups
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/database/{db_name}/backups"/>
 
 获取指定数据库的所有备份文件列表和信息。
 

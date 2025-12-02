@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-GET /stats/system
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/stats/system"/>
 
 获取系统级统计信息，包括数据库连接状态、内存使用情况和磁盘空间等。
 

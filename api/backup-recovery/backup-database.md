@@ -2,11 +2,7 @@
 
 ## 端点信息
 
-```http
-POST /database/{db_name}/backup
-Authorization: Bearer your_api_key
-Content-Type: application/json
-```
+<ApiEndpoint method="POST" path="/database/{db_name}/backup"/>
 
 创建指定数据库的备份，支持多种备份方法和选项。
 

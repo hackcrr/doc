@@ -2,11 +2,7 @@
 
 ## 端点信息
 
-```http
-POST /database/{db_name}/batch/delete
-Authorization: Bearer your_api_key
-Content-Type: application/json
-```
+<ApiEndpoint method="POST" path="/database/{db_name}/batch/delete"/>
 
 批量删除表中的数据，支持条件删除和 ID 列表删除。
 

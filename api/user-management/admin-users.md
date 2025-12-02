@@ -2,33 +2,19 @@
 
 ## 端点信息
 
-```http
-GET /admin/users
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/admin/users"/>
 
 列出所有用户信息。
 
-```http
-POST /admin/users
-Authorization: Bearer your_api_key
-Content-Type: application/json
-```
+<ApiEndpoint method="POST" path="/admin/users"/>
 
 创建新用户。
 
-```http
-PUT /admin/users/{user_id}
-Authorization: Bearer your_api_key
-Content-Type: application/json
-```
+<ApiEndpoint method="PUT" path="/admin/users/{user_id}"/>
 
 更新用户信息。
 
-```http
-DELETE /admin/users/{user_id}
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="DELETE" path="/admin/users/{user_id}"/>
 
 删除用户。
 

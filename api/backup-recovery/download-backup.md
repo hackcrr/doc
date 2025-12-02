@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-GET /backup/{filename}
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/backup/{filename}"/>
 
 下载指定的数据库备份文件。
 

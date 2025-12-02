@@ -2,8 +2,7 @@
   <div class="api-endpoint">
     <div class="endpoint-method" :class="method.toLowerCase()">{{ method }}</div>
     <div class="endpoint-url">
-      <span class="base-url">{{ baseUrl }}</span>
-      <span class="path">{{ path }}</span>
+      <span class="base-url">{{ baseUrl }}</span><span class="path">{{ path }}</span>
     </div>
     <button class="copy-btn" @click="copyUrl">
       <span v-if="!copied">复制</span>
@@ -99,11 +98,18 @@ const copyUrl = async (): Promise<void> => {
   flex: 1;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 0;
+  white-space: nowrap; 
+  min-width: 0; /* 关键：允许内容溢出时缩小 */
+  overflow: hidden; /* 隐藏溢出的文本 */
+  overflow-x: auto; /* 允许水平滚动 */
+  overflow-y: hidden;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: var(--vp-c-border) transparent;
 }
 
 .base-url {
-  color: var(--vp-c-text-2);
+  color: var(--vp-c-text-1);
   font-size: 0.9em;
 }
 
@@ -125,7 +131,7 @@ const copyUrl = async (): Promise<void> => {
 }
 
 .copy-btn:hover {
-  background: var(--vp-c-brand-dark);
+  background: var(--vp-c-brand-1);
   transform: translateY(-1px);
 }
 

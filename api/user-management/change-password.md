@@ -2,19 +2,11 @@
 
 ## 端点信息
 
-```http
-POST /auth/change-password
-Authorization: Bearer your_api_key
-Content-Type: application/json
-```
+<ApiEndpoint method="POST" path="/auth/change-password"/>
 
 修改当前用户的密码。
 
-```http
-POST /admin/users/{user_id}/reset-password
-Authorization: Bearer your_api_key
-Content-Type: application/json
-```
+<ApiEndpoint method="POST" path="/admin/users/{user_id}/reset-password"/>
 
 管理员重置用户密码。
 

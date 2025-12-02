@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-GET /database/{db_name}/table/{table_name}/structure
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/database/{db_name}/table/{table_name}/structure" />
 
 获取指定表的完整结构信息，包括列定义、索引和表统计信息。
 

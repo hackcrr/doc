@@ -4,7 +4,9 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: '数据库管理 API',
   description: '专业的 MySQL 数据库管理接口文档',
-  
+  sitemap: {
+    hostname: 'https://doc.muzilix.cn'
+  },
   // 主题配置
   themeConfig: {
     // 网站logo和标题
@@ -176,10 +178,10 @@ export default defineConfig({
         }
       ]
     },
-
+    
     // 社交链接
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/your-username/database-api' }
+      { icon: 'github', link: 'https://github.com/hackcrr/doc' }
     ],
 
     // 页脚
@@ -204,7 +206,7 @@ export default defineConfig({
 
     // 编辑链接
     editLink: {
-      pattern: 'https://github.com/your-username/database-api/edit/main/docs/:path',
+      pattern: 'https://github.com/hackcrr/doc:path',
       text: '在 GitHub 上编辑此页面'
     },
 
@@ -237,7 +239,7 @@ export default defineConfig({
   head: [
     ['meta', { name: 'theme-color', content: '#3c8772' }],
     ['meta', { name: 'keywords', content: '数据库,API,MySQL,管理接口,文档' }],
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/.vitepress/public/favicon.ico' }]
   ],
 
   // 开发服务器配置

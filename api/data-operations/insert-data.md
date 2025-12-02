@@ -2,11 +2,7 @@
 
 ## 端点信息
 
-```http
-POST /database/{db_name}/table/{table_name}/data
-Authorization: Bearer your_api_key
-Content-Type: application/json
-```
+<ApiEndpoint method="POST" path="/database/{db_name}/table/{table_name}/data"/>
 
 向指定表中插入数据，支持单条插入和批量插入。
 

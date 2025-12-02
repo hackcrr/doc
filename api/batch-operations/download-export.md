@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-GET /download/export/{filename}
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/download/export/{filename}"/>
 
 下载通过导出功能生成的数据文件。
 

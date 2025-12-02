@@ -58,11 +58,18 @@ features:
 ### 🚀 快速开始
 
 ```bash
-# 1. 获取 API 密钥
-curl -X POST http://your-api-server/auth/login \
+# 1. 测试连接
+curl -X GET https://dbapi.muzilix.cn/health \
+
+# 2. 注册用户
+curl -X POST "https://dbapi.muzilix.cn/auth/register" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "username": "newuser",
+    "password": "password123",
+    "email": "user@example.com"
+  }'
+# 3. 获取 API 密钥
+curl -X POST https://dbapi.muzilix.cn/auth/login \
   -H "Content-Type: application/json" \
   -d '{"username": "admin", "password": "admin123"}'
-
-# 2. 测试连接
-curl -X GET http://your-api-server/health \
-  -H "Authorization: Bearer YOUR_API_KEY"

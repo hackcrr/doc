@@ -2,17 +2,11 @@
 
 ## 端点信息
 
-```http
-GET /stats/database
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/stats/database"/>
 
 获取所有数据库的统计概览。
 
-```http
-GET /stats/database/{db_name}
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/stats/database/{db_name}"/>
 
 获取单个数据库的详细统计信息。
 

@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-DELETE /backup/{filename}
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="DELETE" path="/backup/{filename}"/>
 
 删除指定的数据库备份文件。
 

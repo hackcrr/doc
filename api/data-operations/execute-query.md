@@ -2,11 +2,7 @@
 
 ## 端点信息
 
-```http
-POST /database/{db_name}/query
-Authorization: Bearer your_api_key
-Content-Type: application/json
-```
+<ApiEndpoint method="POST" path="/database/{db_name}/query"/>
 
 执行自定义 SQL 查询，支持 SELECT、EXPLAIN、DESCRIBE、SHOW 等只读操作。
 

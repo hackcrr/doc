@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-GET /database/{db_name}/tables
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/database/{db_name}/tables" />
 
 获取指定数据库中的所有表列表。
 

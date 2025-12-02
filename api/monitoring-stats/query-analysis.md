@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-GET /stats/query-analysis
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/stats/query-analysis"/>
 
 获取数据库查询性能监控和慢查询分析信息。
 

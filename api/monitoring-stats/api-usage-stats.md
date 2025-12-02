@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-GET /stats/api-usage
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/stats/api-usage"/>
 
 获取 API 使用统计信息，用户只能看到自己的相关数据。
 

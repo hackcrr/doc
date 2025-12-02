@@ -2,11 +2,7 @@
 
 ## 端点信息
 
-```http
-POST /database/{db_name}/backup/auto
-Authorization: Bearer your_api_key
-Content-Type: application/json
-```
+<ApiEndpoint method="POST" path="/database/{db_name}/backup/auto"/>
 
 配置数据库的自动备份策略。
 

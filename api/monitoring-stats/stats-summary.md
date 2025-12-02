@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-GET /stats/summary
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/stats/summary"/>
 
 获取所有统计信息的汇总摘要，包括数据库、性能、API使用和系统统计的综合视图。
 

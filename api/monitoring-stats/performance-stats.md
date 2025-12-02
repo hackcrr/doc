@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-GET /stats/performance
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/stats/performance"/>
 
 获取数据库性能统计信息，包括连接状态、查询统计和系统性能指标。
 

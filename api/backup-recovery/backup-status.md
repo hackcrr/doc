@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-GET /database/{db_name}/backup/{backup_id}/status
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/database/{db_name}/backup/{backup_id}/status"/>
 
 获取指定备份任务的状态信息。
 

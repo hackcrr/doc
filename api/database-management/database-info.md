@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-GET /database/{db_name}/info
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/database/{db_name}/info" />
 
 获取指定数据库的详细信息，包括字符集、大小、表数量等统计信息。
 

@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-DELETE /database/{db_name}
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="DELETE" path="/database/{db_name}" />
 
 删除指定的 MySQL 数据库。
 

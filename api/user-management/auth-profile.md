@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-GET /auth/profile
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/auth/profile"/>
 
 获取当前认证用户的详细信息。
 

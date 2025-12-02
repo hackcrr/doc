@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-GET /databases
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/databases"/>
 
 获取所有可访问的数据库列表。
 

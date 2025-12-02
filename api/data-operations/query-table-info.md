@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-GET /database/{db_name}/tables-info
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/database/{db_name}/tables-info"/>
 
 获取数据库中所有表的详细信息，包括表结构、统计信息等，用于辅助 SQL 查询编写。
 

@@ -2,11 +2,7 @@
 
 ## 端点信息
 
-```http
-POST /create
-Authorization: Bearer your_api_key
-Content-Type: application/json
-```
+<ApiEndpoint method="POST" path="/create" />
 
 创建新的 MySQL 数据库。
 

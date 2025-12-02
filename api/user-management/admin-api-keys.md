@@ -2,10 +2,7 @@
 
 ## 端点信息
 
-```http
-GET /admin/api-keys
-Authorization: Bearer your_api_key
-```
+<ApiEndpoint method="GET" path="/admin/api-keys"/>
 
 列出所有 API 密钥信息。
 
