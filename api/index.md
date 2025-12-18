@@ -90,6 +90,12 @@ Content-Type: application/json
 #### 用户功能
 - [`GET /user/databases`](user-management/database-permissions.md) - 获取用户数据库列表
 
+### 🤖 AI 增强 (Beta)
+- [`POST /ai/router`](ai-beta/ai-router.md) - 生成后端接口调用计划（仅规划，不执行）
+- [`POST /ai/execute`](ai-beta/ai-execute.md) - 由 AI 规划并实际执行多步接口调用
+- [`POST /ai/nl-execute`](ai-beta/ai-nl-execute.md) - 纯自然语言描述需求，由 AI 规划并执行数据库操作
+- [`GET /ai/endpoints`](ai-beta/ai-endpoints.md) - 导出面向 AI 的接口说明清单（内部/管理员使用）
+
 <!-- ### 🛠️ 工具接口
 - [`GET /database/{db_name}/tables-info`](tools/tables-info.md) - 获取表信息(辅助SQL编写)
 - [`GET /database/{db_name}/query-examples`](tools/query-examples.md) - 获取查询示例 -->

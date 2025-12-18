@@ -85,4 +85,10 @@ export const API_ENDPOINTS = {
   // ==================== 用户个人 ====================
   GET_MY_DATABASES: { method: 'GET', path: '/user/databases', requiresAuth: true } as ApiEndpoint,
   
+  // ==================== AI 增强 (Beta) ====================
+  AI_ROUTER: { method: 'POST', path: '/ai/router', requiresAuth: true } as ApiEndpoint,
+  AI_EXECUTE: { method: 'POST', path: '/ai/execute', requiresAuth: true } as ApiEndpoint,
+  AI_NL_EXECUTE: { method: 'POST', path: '/ai/nl-execute', requiresAuth: true } as ApiEndpoint,
+  AI_LIST_ENDPOINTS: { method: 'GET', path: '/ai/endpoints', requiresAuth: true } as ApiEndpoint,
+  
 } as const;

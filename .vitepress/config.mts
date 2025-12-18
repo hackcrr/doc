@@ -148,6 +148,16 @@ export default defineConfig({
             { text: '管理员功能', link: '/api/user-management/admin-users' },
             { text: '管理员API管理', link: '/api/user-management/admin-api-keys' }
           ]
+        },
+        {
+          text: 'AI 增强 (Beta)',
+          collapsed: true,
+          items: [
+            { text: 'AI 路由 (Beta)', link: '/api/ai-beta/ai-router' },
+            { text: 'AI 执行 (Beta)', link: '/api/ai-beta/ai-execute' },
+            { text: '自然语言执行 (Beta)', link: '/api/ai-beta/ai-nl-execute' },
+            { text: 'AI 接口说明导出 (Beta)', link: '/api/ai-beta/ai-endpoints' }
+          ]
         }
       ],
 
