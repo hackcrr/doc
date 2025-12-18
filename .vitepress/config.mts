@@ -9,8 +9,8 @@ export default defineConfig({
   },
   // 主题配置
   themeConfig: {
-    // 网站logo和标题
-    logo: 'https://pic.muzilix.cn/i/2025/12/02/692ed2b0d5541.png',
+    // 网站logo和标题（使用 public/logo.svg）
+    logo: '/logo.svg',
     siteTitle: '数据库 API',
     
     // 导航栏
@@ -249,7 +249,8 @@ export default defineConfig({
   head: [
     ['meta', { name: 'theme-color', content: '#3c8772' }],
     ['meta', { name: 'keywords', content: '数据库,API,MySQL,管理接口,文档' }],
-    ['link', { rel: 'icon', href: 'https://pic.muzilix.cn/i/2025/12/02/692ed2b0d5541.png' }]
+    // 使用 public/favicon.ico 作为站点图标
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
 
   // 开发服务器配置
